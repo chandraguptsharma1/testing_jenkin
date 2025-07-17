@@ -13,6 +13,6 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 COPY --from=build /app/dist/testing_app/browser /usr/share/nginx/html
-EXPOSE 80
+EXPOSE 4200
 
 CMD ["nginx", "-g", "daemon off;"]
